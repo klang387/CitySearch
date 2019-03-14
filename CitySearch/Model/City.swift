@@ -15,6 +15,14 @@ class City: Decodable, CustomStringConvertible {
     var latitude: Float
     var longitude: Float
     
+    init(country: String, name: String, id: Int, latitude: Float, longitude: Float) {
+        self.country = country
+        self.name = name
+        self.id = id
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+    
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         country = try values.decode(String.self, forKey: .country)
