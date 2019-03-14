@@ -17,6 +17,7 @@
 		0A9E88642239AA410068FA34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E88622239AA410068FA34 /* LaunchScreen.storyboard */; };
 		0A9E88702239ABC60068FA34 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E886F2239ABC60068FA34 /* cities.json */; };
 		0AEB54A12239DA0B00F14998 /* CityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB54A02239DA0B00F14998 /* CityListTableViewCell.swift */; };
+		0AEB54A32239F69600F14998 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB54A22239F69600F14998 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0A9E88652239AA410068FA34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A9E886F2239ABC60068FA34 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		0AEB54A02239DA0B00F14998 /* CityListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListTableViewCell.swift; sourceTree = "<group>"; };
+		0AEB54A22239F69600F14998 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0A9E885B2239AA400068FA34 /* CityListVC.swift */,
+				0AEB54A22239F69600F14998 /* MapVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				0A9E885A2239AA400068FA34 /* AppDelegate.swift in Sources */,
 				0A38523E2239AD9600116768 /* City.swift in Sources */,
 				0A3852402239ADAF00116768 /* CityNameTrie.swift in Sources */,
+				0AEB54A32239F69600F14998 /* MapVC.swift in Sources */,
 				0AEB54A12239DA0B00F14998 /* CityListTableViewCell.swift in Sources */,
 				0A38523C2239AD8600116768 /* CityManager.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class CityListVC: UIViewController {
     
@@ -22,7 +23,7 @@ class CityListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         tableView.isHidden = true
         searchBar.isHidden = true
         loadingView.isHidden = false
@@ -50,6 +51,17 @@ class CityListVC: UIViewController {
             })
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMapVC", let mapVC = segue.destination as? MapVC, let city = sender as? City {
+            mapVC.location = CLLocation(latitude: CLLocationDegrees(city.latitude), longitude: CLLocationDegrees(city.longitude))
+            mapVC.title = city.description
+            let back = UIBarButtonItem()
+            back.title = "Back"
+            back.tintColor = .black
+            navigationItem.backBarButtonItem = back
+        }
+    }
 
 }
 
@@ -67,6 +79,12 @@ extension CityListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let city = cities[indexPath.row]
+        performSegue(withIdentifier: "toMapVC", sender: city)
     }
     
 }

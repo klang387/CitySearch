@@ -25,22 +25,13 @@ class CityManager {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let cityList = try JSONDecoder().decode([City].self, from: data)
-                var startTime = CFAbsoluteTimeGetCurrent()
                 cityList.forEach {
                     self.cityTrie.insert(city: $0)
                 }
-                print("Build trie: \(CFAbsoluteTimeGetCurrent() - startTime)")
-                
-                startTime = CFAbsoluteTimeGetCurrent()
                 self.fullCityList = self.searchTrieForCitiesMatching(prefix: "")
-                print("Sort full city list: \(CFAbsoluteTimeGetCurrent() - startTime)")
-                
-                startTime = CFAbsoluteTimeGetCurrent()
                 for char in "abcdefghijklmnopqrstuvwxyz" {
                     self.firstLetterMap[char] = self.searchTrieForCitiesMatching(prefix: String(char))
                 }
-                print("Create letter map: \(CFAbsoluteTimeGetCurrent() - startTime)")
-                
                 DispatchQueue.main.async {
                     completion?(nil)
                 }

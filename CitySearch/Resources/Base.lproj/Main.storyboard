@@ -95,11 +95,44 @@ Please wait.</string>
                         <outlet property="loadingView" destination="2wi-0r-3Kt" id="h9k-WC-udF"/>
                         <outlet property="searchBar" destination="Vze-0J-1lH" id="AQG-13-usV"/>
                         <outlet property="tableView" destination="zBs-d5-FXm" id="QUc-LT-Vlu"/>
+                        <segue destination="yYS-th-3df" kind="show" identifier="toMapVC" id="Rfx-aB-PkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.2" y="129.98500749625188"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="wmb-X9-12z">
+            <objects>
+                <viewController id="yYS-th-3df" customClass="MapVC" customModule="CitySearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sL9-rE-GoO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-gy-BgS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yYS-th-3df" id="HdO-uw-d5Z"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Dnx-gy-BgS" secondAttribute="bottom" id="5sk-pZ-FKX"/>
+                            <constraint firstItem="Dnx-gy-BgS" firstAttribute="leading" secondItem="do0-a1-Vpv" secondAttribute="leading" id="Asq-or-BQn"/>
+                            <constraint firstItem="Dnx-gy-BgS" firstAttribute="top" secondItem="do0-a1-Vpv" secondAttribute="top" id="Rjf-Ia-DOp"/>
+                            <constraint firstItem="do0-a1-Vpv" firstAttribute="trailing" secondItem="Dnx-gy-BgS" secondAttribute="trailing" id="Wml-sc-eud"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="do0-a1-Vpv"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Dnx-gy-BgS" id="fwF-w7-zmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QhY-3U-YJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aD9-hs-UtC">
@@ -110,6 +143,7 @@ Please wait.</string>
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         </textAttributes>
                     </navigationBar>
