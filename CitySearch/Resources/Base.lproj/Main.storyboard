@@ -38,6 +38,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Rpe-4g-sAx" firstAttribute="centerY" secondItem="Ilt-LJ-Lhf" secondAttribute="centerY" id="EN1-L7-RF6"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rpe-4g-sAx" secondAttribute="trailing" id="Mch-mB-thz"/>
                                                 <constraint firstItem="Rpe-4g-sAx" firstAttribute="leading" secondItem="Ilt-LJ-Lhf" secondAttribute="leading" constant="30" id="d5k-TT-ey3"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -53,7 +54,7 @@
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Vze-0J-1lH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="location"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="rOd-kN-Hg7"/>
                                 </connections>

@@ -27,11 +27,6 @@ class CityListVC: UIViewController {
         tableView.isHidden = true
         searchBar.isHidden = true
         loadingView.isHidden = false
-        loadingView.alpha = 0
-        
-        UIView.animate(withDuration: 1) { [weak self] in
-            self?.loadingView.alpha = 1
-        }
         
         CityManager.shared.importCityJSON { [weak self] (error) in
             guard error == nil else { print(error as Any); return }
@@ -91,8 +86,11 @@ extension CityListVC: UITableViewDelegate, UITableViewDataSource {
 
 extension CityListVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         cities = CityManager.shared.getCitiesMatching(prefix: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 

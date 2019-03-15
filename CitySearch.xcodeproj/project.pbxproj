@@ -10,6 +10,7 @@
 		0A38523C2239AD8600116768 /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38523B2239AD8600116768 /* CityManager.swift */; };
 		0A38523E2239AD9600116768 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38523D2239AD9600116768 /* City.swift */; };
 		0A3852402239ADAF00116768 /* CityNameTrie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38523F2239ADAF00116768 /* CityNameTrie.swift */; };
+		0A46F2C6223B171900EE8A3A /* durandal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A46F2C5223B171900EE8A3A /* durandal.ttf */; };
 		0A9E885A2239AA400068FA34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E88592239AA400068FA34 /* AppDelegate.swift */; };
 		0A9E885C2239AA400068FA34 /* CityListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E885B2239AA400068FA34 /* CityListVC.swift */; };
 		0A9E885F2239AA400068FA34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E885D2239AA400068FA34 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		0A38523B2239AD8600116768 /* CityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
 		0A38523D2239AD9600116768 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		0A38523F2239ADAF00116768 /* CityNameTrie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameTrie.swift; sourceTree = "<group>"; };
+		0A46F2C5223B171900EE8A3A /* durandal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = durandal.ttf; sourceTree = "<group>"; };
 		0A9E88562239AA400068FA34 /* CitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9E88592239AA400068FA34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A9E885B2239AA400068FA34 /* CityListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListVC.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		0A9E886E2239AA6B0068FA34 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0A46F2C5223B171900EE8A3A /* durandal.ttf */,
 				0A9E886F2239ABC60068FA34 /* cities.json */,
 				0A9E88592239AA400068FA34 /* AppDelegate.swift */,
 				0A9E885D2239AA400068FA34 /* Main.storyboard */,
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9E88702239ABC60068FA34 /* cities.json in Resources */,
+				0A46F2C6223B171900EE8A3A /* durandal.ttf in Resources */,
 				0A9E88642239AA410068FA34 /* LaunchScreen.storyboard in Resources */,
 				0A9E88612239AA410068FA34 /* Assets.xcassets in Resources */,
 				0A9E885F2239AA400068FA34 /* Main.storyboard in Resources */,
